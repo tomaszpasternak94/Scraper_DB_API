@@ -43,8 +43,13 @@ xpath_new_flats_menu = """//*[@id="guest-navigation-wrapper"]/ul/li[1]/ul/li[1]/
 new_flats_menu = driver.find_element_by_xpath(xpath_new_flats_menu)
 ActionChains(driver).move_to_element(new_flats_menu).perform()
 
-# find new flats in Warsaw
-xpath_new_flats_in_city = """//*[@id="guest-navigation-wrapper"]/ul/li[1]/ul/li[1]/div[2]/ul/li[1]/a"""
+# find new flats in Region
+xpath_new_flats_in_region = """//*[@id="guest-navigation-wrapper"]/ul/li[1]/ul/li[1]/div[2]/ul/li[6]/a/span"""
+new_flats_in_region = driver.find_element_by_xpath(xpath_new_flats_in_region)
+ActionChains(driver).move_to_element(new_flats_in_region).perform()
+
+# find new flats in City
+xpath_new_flats_in_city = """//*[@id="guest-navigation-wrapper"]/ul/li[1]/ul/li[1]/div[2]/ul/li[6]/ul/li[1]/a"""
 new_flats_in_city = driver.find_element_by_xpath(xpath_new_flats_in_city)
 new_flats_in_city.click()
 
